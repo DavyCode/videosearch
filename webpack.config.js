@@ -13,7 +13,7 @@ module.exports = {
             loader: 'babel',
             query: {
                 presets: ['react', 'es2015', 'stage-1']
-            }
+            },
         }]
     },
     resolve: {
@@ -22,6 +22,8 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         contentBase: './',
-        stats: 'minimal'
+        stats: 'normal',
+        open: true,
+        port: 3000
     }
 };
