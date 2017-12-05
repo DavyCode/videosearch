@@ -10,6 +10,6 @@ Clone this repo, install dependencies, then start the gulp process with the foll
 > git clone https://github.com/davycode/videosearch.git
 > cd videosearch
 > npm install
-> npm start
+> npm run dev
 ```
 
