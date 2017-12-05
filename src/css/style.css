@@ -1,0 +1,60 @@
+html,
+body {
+    height: 100%;
+}
+
+#cover {
+    background: #222 url('../images/photo.jpeg') no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    /* padding-left: 90px; */
+    /* width: 100%; */
+}
+
+#cover-caption {
+    width: 100%;
+    width: 100%;
+    width: 100%;
+}
+
+.form-inline {
+    padding-left: 100px;
+}
+
+img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.section-content {
+    padding: 5rem 0;
+}
+
+#about {
+    background: url("../images/carousel-2.jpeg") center center no-repeat;
+    background-size: cover;
+}
+
+.about-text {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.875rem;
+}
+
+#footer-form {
+    /* background: rgba(0, 0, 0, 0.8); */
+    color: white;
+    /* padding: 1.875rem; */
+}
+
+#footer-main {
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2.5rem 0;
+    margin-top: -80px;
+}

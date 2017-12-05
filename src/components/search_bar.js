@@ -12,9 +12,15 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div> 
-        <input 
-         onChange={ e => this.setState({ term : e.target.value })}/>
+      <div className="row"> 
+        <div className="col-lg-6">
+            <div className="input-group">
+               <input className='form-control' onChange={ e => this.setState({ term : e.target.value })} placeholder="Search for..." aria-label="Search for..."/>
+               <span clasName="input-group-btn">
+                <button className="btn btn-secondary" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
       </div>
     )
   }
