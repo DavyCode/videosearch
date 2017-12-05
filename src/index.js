@@ -1,16 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import YTSearch from 'youtube-api-search'
 
 import SearchBar from './components/search_bar'
 const API_KEY = 'AIzaSyCs9g8em_Z2saT6dRDtJbqN40goVJzIP6M';
 
 
-const App = () => {
-   return ( 
+class App extends Component {
+ constructor (props){
+   super(props);
+
+   this.state = {
+     videos : []
+   }
+
+
+   YTSearch({ key : API_KEY, term : 'react tutorial'}, data => {
+    this.setState({ videos : data });
+ })
+ }
+
+  render(){
+    return ( 
       <div>
           <SearchBar />
       </div>
    )
+  }
+
 }
 
 ReactDOM.render(
