@@ -16,7 +16,7 @@ class App extends Component {
    }
 
 
-   YTSearch({ key : API_KEY, term : 'react tutorial'}, (data) => {
+   YTSearch({ key : API_KEY, term : 'rukus'}, (data) => {
     this.setState({ videos : data });
  })
  }

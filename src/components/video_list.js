@@ -2,13 +2,14 @@ import React from 'react'
 import VideoListItem from './video_list_item'
 
 
-const VideoList = (props) => {
-  const videoItem = props.videos.map( (video) => <VideoListItem video={video} key={Math.random()}/>)
+const VideoList = ({videos}) => {
+  const videoItem = videos.map( video => <VideoListItem video={video} key={video.etag}/>)
    
+
   return (
       <div>
           <ul className="list-group col-4">
-              <li className="list-group-item active">Search Results : {props.videos.length}</li>
+              <li className="list-group-item active">Search Results : {videos.length}</li>
               {videoItem}
           </ul>
       </div>
