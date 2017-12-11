@@ -8,7 +8,7 @@ const VideoList = ({videos}) => {
 
   return (
       <div>
-          <ul className="list-group col-4">
+          <ul className="list-group col-sm-8">
               <li className="list-group-item active">Search Results : {videos.length}</li>
               {videoItem}
           </ul>

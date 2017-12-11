@@ -24,6 +24,6 @@ module.exports = {
         contentBase: './',
         stats: 'normal',
         open: true,
-        port: 3000
+        port: 3001
     }
 };
