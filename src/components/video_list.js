@@ -4,12 +4,13 @@ import VideoListItem from './video_list_item'
 
 const VideoList = ({videos}) => {
   const videoItem = videos.map( video => <VideoListItem video={video} key={video.etag}/>)
-   
+  
 
-  return (
+    return (
       <div>
           <ul className="list-group col-sm-8">
-              <li className="list-group-item active">Search Results : {videos.length}</li>
+              <li className="list-group-item active">Search Results : {videos.length}</li> 
+              {/* //wireup video search term to show up here */}
               {videoItem}
           </ul>
       </div>
@@ -17,3 +18,4 @@ const VideoList = ({videos}) => {
 }
 
 export default VideoList;
+        
