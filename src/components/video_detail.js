@@ -7,12 +7,10 @@ const VideoDetail = ({ video }) => {
     if(!video){
         return (
             <div className="card-block">
-              <div>
-                  <i class="fa fa-spinner" aria-hidden="true"></i>
-                  <h4 className="card-title">
-                     <span class="sr-only">Loading...</span>
-                  </h4>  
-              </div>
+                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                    <span class="sr-only">
+                       <h4 className="card-title">Loading...</h4> 
+                     </span>
             </div>
         )
     }
