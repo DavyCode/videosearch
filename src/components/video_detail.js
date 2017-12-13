@@ -5,11 +5,20 @@ import YouTube from 'react-youtube'
 
 const VideoDetail = ({ video }) => {
     if(!video){
-        return <div>Loading....</div>
+        return (
+            <div className="card-block">
+              <div>
+                  <i class="fa fa-spinner" aria-hidden="true"></i>
+                  <h4 className="card-title">
+                     <span class="sr-only">Loading...</span>
+                  </h4>  
+              </div>
+            </div>
+        )
     }
 
     const videoId = video.id.videoId;
-    const url =`https://www.youtube.com/embed/${videoId}`
+    // const url =`https://www.youtube.com/embed/${videoId}`
 
     const opts = {
         height: '',
@@ -37,6 +46,7 @@ const VideoDetail = ({ video }) => {
                         <div><h4 className="card-title">{video.snippet.title}</h4></div>
                         <div> <p className="card-text">{video.snippet.description}</p></div>
                         <div> <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p></div>
+                         {/* wire up video upload date */}
                     </div>
                 </div>
             </div>
