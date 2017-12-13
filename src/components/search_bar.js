@@ -12,7 +12,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="row"> 
+      <div className="row search-bar"> 
         <div className="col-lg-6 col-sm-8">
             <div className="input-group">
                <input className='form-control' onChange={ e => this.setState({ term : e.target.value })} placeholder="Search for..." aria-label="Search for..."/>
