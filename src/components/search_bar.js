@@ -15,7 +15,10 @@ class SearchBar extends Component {
       <div className="search-bar"> 
         <div className="col-lg-8 col-sm-8">
             <div className="input-group">
-               <input className='form-control' onChange={event => this.onInputChange(event.target.value)} placeholder="Search for..." aria-label="Search for..."/>
+              <input className='form-control' onChange={event => this.onInputChange(event.target.value)} placeholder="Search for..." aria-label="Search for..."/>
+              <span clasName="input-group-btn">
+                <button className="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true">Search</i></button>
+              </span>
             </div>
           </div>
       </div>
