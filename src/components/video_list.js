@@ -15,7 +15,7 @@ const VideoList = ({videos, onVideoSelect}) => {
 
     return (
       <div>
-          <ul className="list-group col-sm-8">
+          <ul className="list-group col-sm-8 col-lg-8">
               <li className="list-group-item active">Search Results : {videos.length}</li> 
               {/* //wireup video search term to show up here */}
               {videoItem}
