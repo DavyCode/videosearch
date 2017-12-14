@@ -7,8 +7,8 @@ const VideoDetail = ({ video }) => {
     if(!video){
         return (
             <div className="card-block">
-                    <i class="fa fa-spinner" aria-hidden="true"></i>
-                    <span class="sr-only">
+                    <i className="fa fa-spinner" aria-hidden="true"></i>
+                    <span className="sr-only">
                        <h4 className="card-title">Loading...</h4> 
                      </span>
             </div>
@@ -33,7 +33,7 @@ const VideoDetail = ({ video }) => {
         
 
     return ( 
-         <div className='col-md-6 col-sm-10'>
+         <div className='col-md-8 col-sm-10'>
              <div className="card mb-3">
                 <div className='embed-responsive embed-responsive-16by9'>
                     {/* <iframe className="embed-responsive-item" scr={url} allowFullScreen></iframe> */}

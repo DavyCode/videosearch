@@ -9,32 +9,42 @@ const API_KEY = 'AIzaSyCs9g8em_Z2saT6dRDtJbqN40goVJzIP6M';
 
 
 class App extends Component {
- constructor (props){
-   super(props);
+  constructor (props){
+    super(props);
 
-   this.state = {
-     videos : [],
-     selectedVideo : null
-   }
+    this.state = {
+      videos : [],
+      selectedVideo : null
+    };
 
+    this.videoSearch('react');
+  }
+   
+  
 
-   YTSearch({ key : API_KEY, term : 'rukus'}, (data) => {
-    console.log(data)
-    this.setState({ 
-      videos : data,
-      selectedVideo : data[0]
-    });
- })
- }
+      videoSearch(term){
+        YTSearch({ key : API_KEY, term : term}, (data) => {
+          if(!data){
+            return (
+               <div> Page intializing... </div>
+            )
+          }
+          this.setState({ 
+            videos : data,
+            selectedVideo : data[0]
+          });
+        });
+      };
+
 
   render(){
     return ( 
-      <div className="container">
-          <SearchBar />
+      <div>
+          <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
           <div className='row'>
               <VideoDetail video={this.state.selectedVideo}/>
               <VideoList 
-              onVideoSelect = {videoSelected => this.setState({selectedVideo : videoSelected})}
+              onVideoSelect={videoSelected => this.setState({selectedVideo : videoSelected})}
               videos={this.state.videos} />
           </div>
           
